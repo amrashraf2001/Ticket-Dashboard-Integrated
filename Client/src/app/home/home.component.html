@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let card of cards">
+      <div [ngClass]="card.bgClass" class="card mb-3">
+        <div class="card-body text-center">
+          <i [ngClass]="card.icon" class="card-icon"></i>
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
