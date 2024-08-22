@@ -26,7 +26,7 @@ namespace TicketAPI.Controllers
 
         // GET: api/Tickets/type/Kiosk
         [HttpGet("type/{type}")]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTicketsByType(string type)
+        public async Task<ActionResult<IEnumerable<Ticket>>> GetTicketsByType(TicketType type)
         {
             return await _context.Tickets.Where(t => t.Type == type).ToListAsync();
         }
@@ -41,7 +41,7 @@ namespace TicketAPI.Controllers
 
         // GET: api/Tickets/getTicketsTotalPricesByType/Kiosk
         [HttpGet("getTicketsTotalPricesByType/{type}")]
-        public async Task<ActionResult<decimal>> GetTicketsTotalPricesByType(string type)
+        public async Task<ActionResult<decimal>> GetTicketsTotalPricesByType(TicketType type)
         {
             var totalPrices = await _context.Tickets.Where(t => t.Type == type).SumAsync(t => t.Price);
             return totalPrices;
@@ -57,7 +57,7 @@ namespace TicketAPI.Controllers
 
         // GET: api/Tickets/getTicketsCountByType/Kiosk
         [HttpGet("getTicketsCountByType/{type}")]
-        public async Task<ActionResult<int>> GetTicketsCountByType(string type)
+        public async Task<ActionResult<int>> GetTicketsCountByType(TicketType type)
         {
             var count = await _context.Tickets.Where(t => t.Type == type).CountAsync();
             return count;

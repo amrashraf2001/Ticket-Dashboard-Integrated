@@ -92,7 +92,7 @@ export class HomeComponent implements OnInit {
   }
 
   KioskTicketCount(): any {
-    this.ticketService.getTicketsCountByType('Kiosk').subscribe((data: any) => {
+    this.ticketService.getTicketsCountByType(2).subscribe((data: any) => {
       this.kioskTicketCount = data;
       this.cards[4].value = this.kioskTicketCount;
     }
@@ -100,7 +100,7 @@ export class HomeComponent implements OnInit {
   }
 
   OnlineTicketCount(): any {
-    this.ticketService.getTicketsCountByType('Online').subscribe((data: any) => {
+    this.ticketService.getTicketsCountByType(1).subscribe((data: any) => {
       this.onlineTicketCount = data;
       this.cards[6].value = this.onlineTicketCount;
     }
@@ -124,7 +124,7 @@ export class HomeComponent implements OnInit {
   }
 
   KioskTicketPrices(): any {
-    this.ticketService.getTicketsTotalPricesByType('Kiosk').subscribe((data: any) => {
+    this.ticketService.getTicketsTotalPricesByType(2).subscribe((data: any) => {
       this.kioskTicketPrices = data;
       this.cards[5].value = 'AED ' + this.kioskTicketPrices;
     }
@@ -132,7 +132,7 @@ export class HomeComponent implements OnInit {
   }
 
   OnlineTicketPrices(): any {
-    this.ticketService.getTicketsTotalPricesByType('Online').subscribe((data: any) => {
+    this.ticketService.getTicketsTotalPricesByType(1).subscribe((data: any) => {
       this.onlineTicketPrices = data;
       this.cards[7].value = 'AED ' + this.onlineTicketPrices;
     }

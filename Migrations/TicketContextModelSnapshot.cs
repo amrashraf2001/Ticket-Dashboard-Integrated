@@ -36,13 +36,12 @@ namespace TicketAPI.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("TicketId");
 
-                    b.ToTable("Ticketsnew", (string)null);
+                    b.ToTable("Ticket", (string)null);
                 });
 #pragma warning restore 612, 618
         }

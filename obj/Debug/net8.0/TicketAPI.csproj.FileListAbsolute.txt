@@ -422,3 +422,4 @@ D:\training\Task3\bin\Debug\net8.0\Client\tsconfig.app.json
 D:\training\Task3\bin\Debug\net8.0\Client\tsconfig.json
 D:\training\Task3\bin\Debug\net8.0\Client\tsconfig.spec.json
 D:\training\Task3\bin\Debug\net8.0\Client\tslint.json
+D:\training\Task3\obj\Debug\net8.0\TicketAPI.sourcelink.json

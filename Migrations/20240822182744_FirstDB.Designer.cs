@@ -12,7 +12,7 @@ using TicketAPI.Data;
 namespace TicketAPI.Migrations
 {
     [DbContext(typeof(TicketContext))]
-    [Migration("20240819230423_FirstDB")]
+    [Migration("20240822182744_FirstDB")]
     partial class FirstDB
     {
         /// <inheritdoc />
@@ -39,13 +39,12 @@ namespace TicketAPI.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("TicketId");
 
-                    b.ToTable("Ticketsnew", (string)null);
+                    b.ToTable("Ticket", (string)null);
                 });
 #pragma warning restore 612, 618
         }

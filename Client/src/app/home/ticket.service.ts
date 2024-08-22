@@ -39,7 +39,7 @@ export class TicketService {
     return this.http.get(`${this.apiUrl}/Tickets/getTicketsTotalPrices`);
   }
 
-  getTicketsTotalPricesByType(type: string): Observable<any> {
+  getTicketsTotalPricesByType(type: any): Observable<any> {
     return this.http.get(`${this.apiUrl}/Tickets/getTicketsTotalPricesByType/${type}`);
   }
 
@@ -47,7 +47,7 @@ export class TicketService {
     return this.http.get<number>(`${this.apiUrl}/Tickets/getTicketsCount`);
   }
 
-  getTicketsCountByType(type: string): Observable<any> {
+  getTicketsCountByType(type: any): Observable<any> {
     return this.http.get(`${this.apiUrl}/Tickets/getTicketsCountByType/${type}`);
   }
 
